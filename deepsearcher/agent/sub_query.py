@@ -11,13 +11,14 @@ Original Question: {original_query}
 
 <EXAMPLE>
 Example input:
-"Explain deep learning"
+"Provide an academic-level comprehensive literature review for sparse autoencoder"
 
 Example output:
 [
-    "What is deep learning?",
-    "What is the difference between deep learning and machine learning?",
-    "What is the history of deep learning?"
+    "Foundations of sparse autoencoder",
+    "Key development in sparse autoencoder research",
+    "Applications of sparse autoencoder",
+    "Future directions of sparse autoencoder"
 ]
 </EXAMPLE>
 
@@ -27,6 +28,7 @@ Provide your response in list of str format:
 
 def generate_sub_queries(original_query: str) -> Tuple[List[str], int]:
     llm = configuration.llm
+    print(llm)
     chat_response = llm.chat(
         messages=[{"role": "user", "content": PROMPT.format(original_query=original_query)}]
     )

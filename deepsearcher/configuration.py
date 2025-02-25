@@ -59,12 +59,11 @@ class ModuleFactory:
         self.config = config
 
     def _create_module_instance(self, feature: FeatureType, module_name: str):
-        # e.g.
-        # feature = "file_loader"
-        # module_name = "deepsearcher.loader.file_loader"
+        
         class_name = self.config.provide_settings[feature]["provider"]
         module = __import__(module_name, fromlist=[class_name])
         class_ = getattr(module, class_name)
+        print(self.config.provide_settings[feature]["config"])
         return class_(**self.config.provide_settings[feature]["config"])
 
     def create_llm(self) -> BaseLLM:

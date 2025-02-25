@@ -17,6 +17,7 @@ def load_from_local_files(
     chunk_overlap=100,
 ):
     vector_db = configuration.vector_db
+    print(vector_db)
     if collection_name is None:
         collection_name = vector_db.default_collection
     collection_name = collection_name.replace(" ", "_").replace("-", "_")
