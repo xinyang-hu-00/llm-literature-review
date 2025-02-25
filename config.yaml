@@ -3,8 +3,8 @@ provide_settings:
     provider: "OpenAI"
     config:
       model: "gpt-4o-mini"  # "gpt-o1-mini"
-      api_key: "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"
-      base_url: ""
+      # api_key: ""
+      # base_url: ""
 
 #    provider: "DeepSeek"
 #    config:
@@ -34,7 +34,7 @@ provide_settings:
     provider: "OpenAIEmbedding"
     config:
       model: "text-embedding-ada-002"
-      api_key: "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"  # Uncomment to override the `OPENAI_API_KEY` set in the environment variable
+      # api_key:  # Uncomment to override the `OPENAI_API_KEY` set in the environment variable
 
 
 #    provider: "MilvusEmbedding"

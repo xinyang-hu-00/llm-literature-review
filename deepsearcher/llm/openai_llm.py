@@ -17,7 +17,6 @@ class OpenAI(BaseLLM):
             base_url = kwargs.pop("base_url")
         else:
             base_url = None
-        api_key = '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'
         self.client = OpenAI_(api_key=api_key, base_url=base_url, **kwargs)
 
     def chat(self, messages: List[Dict]) -> ChatResponse:
