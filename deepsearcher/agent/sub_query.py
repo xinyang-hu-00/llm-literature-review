@@ -11,14 +11,14 @@ Original Question: {original_query}
 
 <EXAMPLE>
 Example input:
-"Provide an academic-level comprehensive literature review for sparse autoencoder"
+"Provide a academic-level literature review for Sparse Autoencoders."
 
 Example output:
 [
-    "Foundations of sparse autoencoder",
-    "Key development in sparse autoencoder research",
-    "Applications of sparse autoencoder",
-    "Future directions of sparse autoencoder"
+    "Definitions and foundations of sparse autoencoders",
+    "Key developments and insights of sparse autoencoders",
+    "Applications of sparse autoencoders",
+    "Future research directions of sparse autoencoders"
 ]
 </EXAMPLE>
 
