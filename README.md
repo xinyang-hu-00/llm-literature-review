@@ -1,8 +1,9 @@
-# DeepSearcher
+Modified from https://github.com/zilliztech/deep-searcher?tab=readme-ov-file
+# Workflow
+Utilizing reasoning LLMs (OpenAI o1, o3-mini, DeepSeek, Grok 3) and vector databases (Milvus, Zilliz Cloud) to generate comprehensive literature reviews by iteratively constructing and merging search trees for guided LLM generation.
 
-DeepSearcher combines reasoning LLMs (OpenAI o1, o3-mini, DeepSeek, Grok 3 etc.) and Vector Databases (Milvus, Zilliz Cloud etc.) to perform search, evaluation, and reasoning based on private data, providing highly accurate answer and comprehensive report. This project is suitable for enterprise knowledge management, intelligent Q&A systems, and information retrieval scenarios.
 
-![Architecture](./assets/pic/deep-searcher-arch.png)
+![Architecture](./assets/pic/illustration.png)
 
 ## 🚀 Features
 

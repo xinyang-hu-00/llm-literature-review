@@ -3,8 +3,7 @@ from typing import List, Tuple
 # from deepsearcher.configuration import llm
 from deepsearcher import configuration
 
-PROMPT = """To answer this question more comprehensively, please break down the original question into up to four sub-questions. Return as list of str.
-If this is a very simple question and no decomposition is necessary, then keep the only one original question in the list.
+PROMPT = """To provide a comprehensive answer, break the question into up to four sub-questions, each covering a different aspect. Return a list of strings. If this is a very simple question and no decomposition is necessary, then keep the only one original question in the list. Cite recent academic papers from top journals or conferences.
 
 Original Question: {original_query}
 
