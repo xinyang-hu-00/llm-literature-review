@@ -7,8 +7,8 @@ config = Configuration()
 # more configuration see the Configuration Details section below.
 config.set_provider_config("llm", "OpenAI", {"model": "gpt-4o-mini"})
 config.set_provider_config("embedding", "OpenAIEmbedding", {"model": "text-embedding-ada-002"})
-#config.set_provider_config("vector_db", "Milvus", {"uri": "./milvus.db", "token": ""})
-#config.set_provider_config("file_loader", "UnstructuredLoader", {})
+config.set_provider_config("vector_db", "Milvus", {"uri": "./milvus.db", "token": ""})
+config.set_provider_config("file_loader", "UnstructuredLoader", {})
 init_config(config = config)
 
 # Load your local data

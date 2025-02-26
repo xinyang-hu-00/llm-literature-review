@@ -54,3 +54,34 @@ def get_final_answer_prompt(
     {mini_chunk_str}
     """
     return summary_prompt
+
+def get_section_content(
+    question: str, 
+    mini_chuncks: List[str]
+):
+    mini_chunk_str = ""
+    for i, chunk in enumerate(mini_chuncks):
+        mini_chunk_str += f"""<chunk_{i}>\n{chunk}\n</chunk_{i}>\n"""
+    summary_prompt = f"""You are a AI researcher, good at analyzing academic resources. Please summarize a specific and detailed answer or report based on the given query and the retrieved document chunks.
+
+    Query: {question}
+    Related Chunks: 
+    {mini_chunk_str}
+    """
+    return summary_prompt
+    
+
+
+def get_sec_intro_prompt(
+    question: str,
+    mini_questions: List[str]
+):
+    if len(mini_questions)==0:
+        raise Exception('This is a leaf node, you shall not be generating summary.')
+        
+    summary_prompt = f"""You are an AI content analysis expert skilled in summarization. Write a single-paragraph introduction for a section addressing the given question, followed by the specified subsections. Ensure the introduction provides a clear overview and context, setting the stage for the detailed analysis in the subsequent subsections.
+
+    Original Query: {question}
+    Previous Sub Queries: {mini_questions}
+    """
+    return summary_prompt

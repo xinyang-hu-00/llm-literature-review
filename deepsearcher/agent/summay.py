@@ -3,7 +3,7 @@ from typing import List, Tuple
 from deepsearcher import configuration
 
 # from deepsearcher.configuration import llm
-from deepsearcher.agent.prompt import get_final_answer_prompt
+from deepsearcher.agent.prompt import get_final_answer_prompt, get_sec_intro_prompt, get_section_content
 from deepsearcher.tools import log
 from deepsearcher.vector_db.base import RetrievalResult
 
@@ -28,3 +28,17 @@ def generate_final_answer(
     )
     chat_response = llm.chat([{"role": "user", "content": summary_prompt}])
     return chat_response.content, chat_response.total_tokens
+
+def generate_cur_sec_summary(query, subqueries):
+    llm = configuration.llm
+    summary_prompt = get_sec_intro_prompt(query, subqueries)
+    chat_response = llm.chat([{"role": "user", "content": summary_prompt}])
+    return chat_response.content, chat_response.total_tokens
+
+def generate_sec_content(query, all_chunks):
+    llm = configuration.llm
+    summary_prompt = get_section_content(query, all_chunks)
+    chat_response = llm.chat([{"role": "user", "content": summary_prompt}])
+    return chat_response.content, chat_response.total_tokens
+
+

@@ -1,6 +1,6 @@
 Modified from https://github.com/zilliztech/deep-searcher?tab=readme-ov-file
 # Workflow
-Utilizing reasoning LLMs (OpenAI o1, o3-mini, DeepSeek, Grok 3) and vector databases (Milvus, Zilliz Cloud) to generate comprehensive literature reviews by iteratively constructing and merging search trees for guided LLM generation.
+Utilizing reasoning LLMs (OpenAI o1, o3-mini, DeepSeek, Grok 3) and vector databases (Milvus, Zilliz Cloud) to generate comprehensive literature reviews by iteratively constructing and merging search trees for guided LLM generation. 
 
 
 ![Architecture](./assets/pic/illustration.png)
@@ -14,10 +14,6 @@ Utilizing reasoning LLMs (OpenAI o1, o3-mini, DeepSeek, Grok 3) and vector datab
 - **Document Loader**: Supports local file loading, with web crawling capabilities under development.
 
 ---
-
-## 🎉 Demo
-![demo](./assets/pic/demo.gif)
-
 
 ## 📖 Quick Start
 
