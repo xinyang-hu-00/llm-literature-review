@@ -13,8 +13,8 @@ from deepsearcher.agent import (
 def dfs(original_query: str):
     llm = configuration.llm
     tree = defaultdict(list)
-    stack, visited = [], set()
-    node_values = {}  # Dictionary to store computed values
+    stack = []
+    
     stack.append(original_query)
     final_answer = []
     tree_complete = False
